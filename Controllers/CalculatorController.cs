@@ -1,51 +1,54 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CalculatorAPI.Services;
+using Microsoft.AspNetCore.Mvc;
+using CalculatorAPI.Models;
 
-[ApiController]
-[Route("api/[controller]")]
-public class CalculatorController : ControllerBase
+using FluentValidation;
+
+namespace CalculatorAPI.Controllers
 {
-    private readonly Addition _addition;
-    private readonly Subtract _subtract;
-    private readonly Multiply _multiply;
-    private readonly Divide _divide;
-
-    // ASP.NET Core will inject these automatically because you registered them in Program.cs
-    public CalculatorController(Addition addition, Subtract subtract, Multiply multiply, Divide divide)
+    [ApiController]
+    [Route("api/[controller]")]
+    public class CalculatorController : ControllerBase
     {
-        _addition = addition;
-        _subtract = subtract;
-        _multiply = multiply;
-        _divide = divide;
-    }
+        private readonly IValidator<CalculationRequest> _validator;
+        private readonly Addition _addition;
+        private readonly Subtract _subtract;
+        private readonly Multiply _multiply;
+        private readonly Divide _divide;
 
-    [HttpGet("add")]
-    public IActionResult Add(double a, double b)
-    {
-        return Ok(_addition.Calculate(a, b));
-    }
-
-    [HttpGet("subtract")]
-    public IActionResult Subtract(double a, double b)
-    {
-        return Ok(_subtract.Calculate(a, b));
-    }
-
-    [HttpGet("multiply")]
-    public IActionResult Multiply(double a, double b)
-    {
-        return Ok(_multiply.Calculate(a, b));
-    }
-
-    [HttpGet("divide")]
-    public IActionResult Divide(double a, double b)
-    {
-        try
+        public CalculatorController(
+            IValidator<CalculationRequest> validator,
+            Addition addition,
+            Subtract subtract,
+            Multiply multiply,
+            Divide divide)
         {
-            return Ok(_divide.Calculate(a, b));
+            _validator = validator;
+            _addition = addition;
+            _subtract = subtract;
+            _multiply = multiply;
+            _divide = divide;
         }
-        catch (DivideByZeroException ex)
+
+        [HttpPost("calculate")]
+        public async Task<IActionResult> Calculate(CalculationRequest request)
         {
-            return BadRequest(ex.Message);
+            var result = await _validator.ValidateAsync(request);
+            if (!result.IsValid)
+            {
+                return BadRequest(result.Errors);
+            }
+
+            double output = request.Operation.ToLower() switch
+            {
+                "add" => _addition.Calculate(request.A, request.B),
+                "subtract" => _subtract.Calculate(request.A, request.B),
+                "multiply" => _multiply.Calculate(request.A, request.B),
+                "divide" => _divide.Calculate(request.A, request.B),
+                _ => throw new InvalidOperationException("Invalid operation")
+            };
+
+            return Ok(output);
         }
     }
 }

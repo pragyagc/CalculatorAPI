@@ -1,9 +1,7 @@
- public class Multiply : IOperation
+namespace CalculatorAPI.Services
 {
-    private double result_mul;
-    public  double Calculate(double a ,double b)
+    public class Multiply : IOperation
     {
-        result_mul= a * b;
-        return result_mul;
+        public double Calculate(double a, double b) => a * b;
     }
 }

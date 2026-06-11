@@ -1,13 +1,18 @@
-public class  Calculator
+namespace CalculatorAPI.Services
 {
-    private readonly IOperation operation;
-    public Calculator(IOperation operation) //DI injected via constructor
+    public class Calculator
     {
-        this.operation = operation;
-    }
+        private readonly IOperation _operation;
 
-    public  double Calculate (double a ,double b)
-     {
-        return  operation.Calculate(a,b);
-     }
+        // DI injected via constructor
+        public Calculator(IOperation operation)
+        {
+            _operation = operation;
+        }
+
+        public double Calculate(double a, double b)
+        {
+            return _operation.Calculate(a, b);
+        }
+    }
 }

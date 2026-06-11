@@ -1,13 +1,7 @@
-public class Divide: IOperation
+namespace CalculatorAPI.Services
 {
-    private double result_div;
-    public double Calculate(double a,double b )
+    public class Divide : IOperation
     {
-        if( b==0)
-        {
-            throw new DivideByZeroException(" cannot divide by zero.");
-        }
-        result_div= a / b;
-        return result_div;
+        public double Calculate(double a, double b) => a / b; // validator handles divide-by-zero
     }
 }

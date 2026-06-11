@@ -1,4 +1,7 @@
-public interface IOperation
+namespace CalculatorAPI.Services
 {
-  double Calculate(double a,double b);
+    public interface IOperation
+    {
+        double Calculate(double a, double b);
+    }
 }
