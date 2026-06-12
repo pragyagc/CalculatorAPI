@@ -1,7 +1,14 @@
+using CalculatorAPI.Services;
+
 namespace CalculatorAPI.Services
 {
     public class Addition : IOperation
-    {
-        public double Calculate(double a, double b) => a + b;
+    {  
+        private double result_add;
+        public double Calculate(double a, double b)
+        {
+            result_add = a + b;
+            return result_add;
+        }
     }
 }

@@ -4,6 +4,6 @@
     {
         public double A { get; set; }
         public double B { get; set; }
-        public string Operation { get; set; } = string.Empty; // default value avoids warning
+        public string Operation { get; set; } = string.Empty; 
     }
 }

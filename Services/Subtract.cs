@@ -2,6 +2,13 @@ namespace CalculatorAPI.Services
 {
     public class Subtract : IOperation
     {
-        public double Calculate(double a, double b) => a - b;
+        private double result_sub;
+        
+        public double Calculate(double a, double b)
+        {
+
+            result_sub = a - b;
+            return result_sub;
+        }
     }
 }

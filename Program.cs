@@ -1,21 +1,25 @@
+using CalculatorAPI.Services;
+using CalculatorAPI.Models;
+using CalculatorAPI.Validators;
 using FluentValidation;
 using FluentValidation.AspNetCore;
-using CalculatorAPI.Validators;
-using CalculatorAPI.Services;
-
+using Scrutor;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-// ✅ Register FluentValidation
+// Register FluentValidation
 builder.Services.AddValidatorsFromAssemblyContaining<CalculationRequestValidator>();
 
-// ✅ Register your math services
-builder.Services.AddScoped<Addition>();
-builder.Services.AddScoped<Subtract>();
-builder.Services.AddScoped<Multiply>();
-builder.Services.AddScoped<Divide>();
+//builder.Services.AddScoped<IOperation, Addition>();
+//builder.Services.AddScoped<IOperation, Subtract>();
+//builder.Services.AddScoped<IOperation, Multiply>();
+//builder.Services.AddScoped<IOperation, Divide >();
+
+
+builder.Services.AddScoped<OperationFactory>();
+builder.Services.AddScoped<Calculator>();
 
 
 builder.Services.AddEndpointsApiExplorer();

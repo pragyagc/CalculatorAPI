@@ -2,6 +2,12 @@ namespace CalculatorAPI.Services
 {
     public class Divide : IOperation
     {
-        public double Calculate(double a, double b) => a / b; // validator handles divide-by-zero
+        private double result_div;
+       
+        public double Calculate(double a, double b)
+        {
+            result_div = a / b;
+            return result_div;
+        }
     }
 }

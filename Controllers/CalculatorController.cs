@@ -1,7 +1,6 @@
 ﻿using CalculatorAPI.Services;
 using Microsoft.AspNetCore.Mvc;
 using CalculatorAPI.Models;
-
 using FluentValidation;
 
 namespace CalculatorAPI.Controllers
@@ -11,44 +10,34 @@ namespace CalculatorAPI.Controllers
     public class CalculatorController : ControllerBase
     {
         private readonly IValidator<CalculationRequest> _validator;
-        private readonly Addition _addition;
-        private readonly Subtract _subtract;
-        private readonly Multiply _multiply;
-        private readonly Divide _divide;
+        private readonly OperationFactory _factory;
 
-        public CalculatorController(
-            IValidator<CalculationRequest> validator,
-            Addition addition,
-            Subtract subtract,
-            Multiply multiply,
-            Divide divide)
+        public CalculatorController(IValidator<CalculationRequest> validator, OperationFactory factory)
         {
             _validator = validator;
-            _addition = addition;
-            _subtract = subtract;
-            _multiply = multiply;
-            _divide = divide;
+            _factory = factory;
         }
 
         [HttpPost("calculate")]
-        public async Task<IActionResult> Calculate(CalculationRequest request)
+        public IActionResult Calculate([FromBody] CalculationRequest request)
         {
-            var result = await _validator.ValidateAsync(request);
-            if (!result.IsValid)
+            var validationResult = _validator.Validate(request);
+            if (!validationResult.IsValid)
             {
-                return BadRequest(result.Errors);
+                return BadRequest(validationResult.Errors);
             }
 
-            double output = request.Operation.ToLower() switch
+            try
             {
-                "add" => _addition.Calculate(request.A, request.B),
-                "subtract" => _subtract.Calculate(request.A, request.B),
-                "multiply" => _multiply.Calculate(request.A, request.B),
-                "divide" => _divide.Calculate(request.A, request.B),
-                _ => throw new InvalidOperationException("Invalid operation")
-            };
+                var operation = _factory.GetOperation(request.Operation);
+                var result = operation.Calculate(request.A, request.B); 
 
-            return Ok(output);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

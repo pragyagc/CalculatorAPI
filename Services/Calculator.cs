@@ -4,7 +4,6 @@ namespace CalculatorAPI.Services
     {
         private readonly IOperation _operation;
 
-        // DI injected via constructor
         public Calculator(IOperation operation)
         {
             _operation = operation;
