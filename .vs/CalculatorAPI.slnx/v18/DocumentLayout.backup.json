@@ -1,0 +1,388 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\c#\\vs_calculator\\CalculatorAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|e:\\c#\\vs_calculator\\calculatorapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|e:\\c#\\vs_calculator\\calculatorapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|e:\\c#\\vs_calculator\\calculatorapi\\calculatorapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|solutionrelative:calculatorapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|e:\\c#\\vs_calculator\\calculatorapi\\data\\calculatordbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|solutionrelative:data\\calculatordbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|e:\\c#\\vs_calculator\\calculatorapi\\controllers\\calculatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|solutionrelative:controllers\\calculatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|e:\\c#\\vs_calculator\\calculatorapi\\data\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|solutionrelative:data\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|e:\\c#\\vs_calculator\\calculatorapi\\models\\calculationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|solutionrelative:models\\calculationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|e:\\c#\\vs_calculator\\calculatorapi\\data\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|solutionrelative:data\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|e:\\c#\\vs_calculator\\calculatorapi\\models\\operation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|solutionrelative:models\\operation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|e:\\c#\\vs_calculator\\calculatorapi\\models\\calculation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|solutionrelative:models\\calculation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|e:\\c#\\vs_calculator\\calculatorapi\\services\\ioperation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|solutionrelative:services\\ioperation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|e:\\c#\\vs_calculator\\calculatorapi\\services\\addition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|solutionrelative:services\\addition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|e:\\c#\\vs_calculator\\calculatorapi\\services\\operationfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|solutionrelative:services\\operationfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|e:\\c#\\vs_calculator\\calculatorapi\\validators\\calculationrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|solutionrelative:validators\\calculationrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|e:\\c#\\vs_calculator\\calculatorapi\\services\\subtract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|solutionrelative:services\\subtract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|e:\\c#\\vs_calculator\\calculatorapi\\services\\multiply.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|solutionrelative:services\\multiply.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|e:\\c#\\vs_calculator\\calculatorapi\\services\\divide.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|solutionrelative:services\\divide.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|e:\\c#\\vs_calculator\\calculatorapi\\services\\calculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|solutionrelative:services\\calculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|e:\\c#\\vs_calculator\\calculatorapi\\calculatorapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{42AAEFA1-7A9D-94FC-CDD9-B6165CF31453}|CalculatorAPI.csproj|solutionrelative:calculatorapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\c#\\vs_calculator\\ConsoleApp1\\ConsoleApp1\\Factory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\c#\\vs_calc\\Factory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\c#\\vs_calculator\\ConsoleApp1\\ConsoleApp1\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\c#\\vs_calculator\\ConsoleApp1\\ConsoleApp1\\Ioperation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CalculatorDbContext.cs",
+              "DocumentMoniker": "E:\\c#\\vs_calculator\\CalculatorAPI\\Data\\CalculatorDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\CalculatorDbContext.cs",
+              "ToolTip": "E:\\c#\\vs_calculator\\CalculatorAPI\\Data\\CalculatorDbContext.cs",
+              "RelativeToolTip": "Data\\CalculatorDbContext.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAuwD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-18T04:25:24.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CalculationRequest.cs",
+              "DocumentMoniker": "E:\\c#\\vs_calculator\\CalculatorAPI\\Models\\CalculationRequest.cs",
+              "RelativeDocumentMoniker": "Models\\CalculationRequest.cs",
+              "ToolTip": "E:\\c#\\vs_calculator\\CalculatorAPI\\Models\\CalculationRequest.cs",
+              "RelativeToolTip": "Models\\CalculationRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-18T04:25:11.781Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\c#\\vs_calculator\\CalculatorAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\c#\\vs_calculator\\CalculatorAPI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAEQAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-11T05:32:27.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "E:\\c#\\vs_calculator\\CalculatorAPI\\Data\\Repository.cs",
+              "RelativeDocumentMoniker": "Data\\Repository.cs",
+              "ToolTip": "E:\\c#\\vs_calculator\\CalculatorAPI\\Data\\Repository.cs",
+              "RelativeToolTip": "Data\\Repository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-17T04:24:26.324Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "E:\\c#\\vs_calculator\\CalculatorAPI\\Data\\IRepository.cs",
+              "RelativeDocumentMoniker": "Data\\IRepository.cs",
+              "ToolTip": "E:\\c#\\vs_calculator\\CalculatorAPI\\Data\\IRepository.cs",
+              "RelativeToolTip": "Data\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-17T09:21:33.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Operation.cs",
+              "DocumentMoniker": "E:\\c#\\vs_calculator\\CalculatorAPI\\Models\\Operation.cs",
+              "RelativeDocumentMoniker": "Models\\Operation.cs",
+              "ToolTip": "E:\\c#\\vs_calculator\\CalculatorAPI\\Models\\Operation.cs",
+              "RelativeToolTip": "Models\\Operation.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-17T08:22:49.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CalculatorAPI.http",
+              "DocumentMoniker": "E:\\c#\\vs_calculator\\CalculatorAPI\\CalculatorAPI.http",
+              "RelativeDocumentMoniker": "CalculatorAPI.http",
+              "ToolTip": "E:\\c#\\vs_calculator\\CalculatorAPI\\CalculatorAPI.http",
+              "RelativeToolTip": "CalculatorAPI.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-06-17T05:57:48.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\c#\\vs_calculator\\CalculatorAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "E:\\c#\\vs_calculator\\CalculatorAPI\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-17T05:14:31.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CalculatorController.cs",
+              "DocumentMoniker": "E:\\c#\\vs_calculator\\CalculatorAPI\\Controllers\\CalculatorController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CalculatorController.cs",
+              "ToolTip": "E:\\c#\\vs_calculator\\CalculatorAPI\\Controllers\\CalculatorController.cs",
+              "RelativeToolTip": "Controllers\\CalculatorController.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-18T04:25:20.368Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Calculation.cs",
+              "DocumentMoniker": "E:\\c#\\vs_calculator\\CalculatorAPI\\Models\\Calculation.cs",
+              "RelativeDocumentMoniker": "Models\\Calculation.cs",
+              "ToolTip": "E:\\c#\\vs_calculator\\CalculatorAPI\\Models\\Calculation.cs",
+              "RelativeToolTip": "Models\\Calculation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-17T08:00:04.582Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Multiply.cs",
+              "DocumentMoniker": "E:\\c#\\vs_calculator\\CalculatorAPI\\Services\\Multiply.cs",
+              "RelativeDocumentMoniker": "Services\\Multiply.cs",
+              "ToolTip": "E:\\c#\\vs_calculator\\CalculatorAPI\\Services\\Multiply.cs",
+              "RelativeToolTip": "Services\\Multiply.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T06:10:51.36Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Addition.cs",
+              "DocumentMoniker": "E:\\c#\\vs_calculator\\CalculatorAPI\\Services\\Addition.cs",
+              "RelativeDocumentMoniker": "Services\\Addition.cs",
+              "ToolTip": "E:\\c#\\vs_calculator\\CalculatorAPI\\Services\\Addition.cs",
+              "RelativeToolTip": "Services\\Addition.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T08:07:26.214Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Ioperation.cs",
+              "DocumentMoniker": "E:\\c#\\vs_calculator\\CalculatorAPI\\Services\\Ioperation.cs",
+              "RelativeDocumentMoniker": "Services\\Ioperation.cs",
+              "ToolTip": "E:\\c#\\vs_calculator\\CalculatorAPI\\Services\\Ioperation.cs",
+              "RelativeToolTip": "Services\\Ioperation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-11T10:30:03.653Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CalculationRequestValidator.cs",
+              "DocumentMoniker": "E:\\c#\\vs_calculator\\CalculatorAPI\\Validators\\CalculationRequestValidator.cs",
+              "RelativeDocumentMoniker": "Validators\\CalculationRequestValidator.cs",
+              "ToolTip": "E:\\c#\\vs_calculator\\CalculatorAPI\\Validators\\CalculationRequestValidator.cs",
+              "RelativeToolTip": "Validators\\CalculationRequestValidator.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAwAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-11T09:37:27.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "OperationFactory.cs",
+              "DocumentMoniker": "E:\\c#\\vs_calculator\\CalculatorAPI\\Services\\OperationFactory.cs",
+              "RelativeDocumentMoniker": "Services\\OperationFactory.cs",
+              "ToolTip": "E:\\c#\\vs_calculator\\CalculatorAPI\\Services\\OperationFactory.cs",
+              "RelativeToolTip": "Services\\OperationFactory.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwAwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T07:19:37.376Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Subtract.cs",
+              "DocumentMoniker": "E:\\c#\\vs_calculator\\CalculatorAPI\\Services\\Subtract.cs",
+              "RelativeDocumentMoniker": "Services\\Subtract.cs",
+              "ToolTip": "E:\\c#\\vs_calculator\\CalculatorAPI\\Services\\Subtract.cs",
+              "RelativeToolTip": "Services\\Subtract.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T05:59:58.686Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Divide.cs",
+              "DocumentMoniker": "E:\\c#\\vs_calculator\\CalculatorAPI\\Services\\Divide.cs",
+              "RelativeDocumentMoniker": "Services\\Divide.cs",
+              "ToolTip": "E:\\c#\\vs_calculator\\CalculatorAPI\\Services\\Divide.cs",
+              "RelativeToolTip": "Services\\Divide.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T03:46:33.113Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Calculator.cs",
+              "DocumentMoniker": "E:\\c#\\vs_calculator\\CalculatorAPI\\Services\\Calculator.cs",
+              "RelativeDocumentMoniker": "Services\\Calculator.cs",
+              "ToolTip": "E:\\c#\\vs_calculator\\CalculatorAPI\\Services\\Calculator.cs",
+              "RelativeToolTip": "Services\\Calculator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T08:23:40.59Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CalculatorAPI.csproj",
+              "DocumentMoniker": "E:\\c#\\vs_calculator\\CalculatorAPI\\CalculatorAPI.csproj",
+              "RelativeDocumentMoniker": "CalculatorAPI.csproj",
+              "ToolTip": "E:\\c#\\vs_calculator\\CalculatorAPI\\CalculatorAPI.csproj",
+              "RelativeToolTip": "CalculatorAPI.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-06-11T09:36:24.3Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Factory.cs",
+              "DocumentMoniker": "E:\\c#\\vs_calculator\\ConsoleApp1\\ConsoleApp1\\Factory.cs",
+              "RelativeDocumentMoniker": "..\\ConsoleApp1\\ConsoleApp1\\Factory.cs",
+              "ToolTip": "E:\\c#\\vs_calculator\\ConsoleApp1\\ConsoleApp1\\Factory.cs",
+              "RelativeToolTip": "..\\ConsoleApp1\\ConsoleApp1\\Factory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T05:26:08.899Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Factory.cs",
+              "DocumentMoniker": "E:\\c#\\vs_calc\\Factory.cs",
+              "RelativeDocumentMoniker": "..\\..\\vs_calc\\Factory.cs",
+              "ToolTip": "E:\\c#\\vs_calc\\Factory.cs",
+              "RelativeToolTip": "..\\..\\vs_calc\\Factory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T07:14:37.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\c#\\vs_calculator\\ConsoleApp1\\ConsoleApp1\\Program.cs",
+              "RelativeDocumentMoniker": "..\\ConsoleApp1\\ConsoleApp1\\Program.cs",
+              "ToolTip": "E:\\c#\\vs_calculator\\ConsoleApp1\\ConsoleApp1\\Program.cs",
+              "RelativeToolTip": "..\\ConsoleApp1\\ConsoleApp1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T05:26:22.276Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Ioperation.cs",
+              "DocumentMoniker": "E:\\c#\\vs_calculator\\ConsoleApp1\\ConsoleApp1\\Ioperation.cs",
+              "RelativeDocumentMoniker": "..\\ConsoleApp1\\ConsoleApp1\\Ioperation.cs",
+              "ToolTip": "E:\\c#\\vs_calculator\\ConsoleApp1\\ConsoleApp1\\Ioperation.cs",
+              "RelativeToolTip": "..\\ConsoleApp1\\ConsoleApp1\\Ioperation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T05:26:15.82Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
