@@ -8,10 +8,10 @@ namespace CalculatorAPI.Services
         {
             return operationName.ToLower() switch
             {
-                "add" => new Addition(),
-                "subtract" => new Subtract(),
-                "multiply" => new Multiply(),
-                "divide" => new Divide(),
+                "+" => new Addition(),
+                "-" => new Subtract(),
+                "*" => new Multiply(),
+                "/" => new Divide(),
                 _ => throw new InvalidOperationException($"Unknown operation: {operationName}")
             };
         }
