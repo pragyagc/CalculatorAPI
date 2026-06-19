@@ -48,12 +48,19 @@ const calculate = async () => {
   try {
   
     const response: any = await CalculatorService.postApiCalculatorCalculate(requestBody);
-    
+   
     setDisplay(response);
-    // setOperandA(response.result.toString());
-    // setOperandB("");
-    // setOperation(null);
-    // setCurrentOperand("A");
+    // Keep result as new operandA so chaining works
+    setOperandA(response);
+
+    // Reset operandB for next input
+    setOperandB("");
+
+    // Reset operation so user can pick a new one
+    setOperation(null);
+
+    // Next input should go into operandB
+    setCurrentOperand("B");
 
     loadHistory();
   } catch (err) {
