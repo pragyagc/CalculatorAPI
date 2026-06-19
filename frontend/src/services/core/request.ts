@@ -218,7 +218,7 @@ export const sendRequest = async <T>(
     onCancel(() => source.cancel('The user aborted a request.'));
 
     try {
-        return await axiosClient.request(requestConfig);
+        return await axiosClient.request<T>(requestConfig);
     } catch (error) {
         const axiosError = error as AxiosError<T>;
         if (axiosError.response) {
