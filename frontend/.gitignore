@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# Frontend (React/Vite)
+frontend/node_modules/
+frontend/dist/

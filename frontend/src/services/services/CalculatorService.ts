@@ -2,7 +2,6 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-import type { Calculation } from '../models/Calculation';
 import type { CalculationRequest } from '../models/CalculationRequest';
 
 import type { CancelablePromise } from '../core/CancelablePromise';
@@ -12,13 +11,13 @@ import { request as __request } from '../core/request';
 export class CalculatorService {
 
     /**
-     * @returns Calculation OK
+     * @returns any OK
      * @throws ApiError
      */
-    public static getApiCalculatorHistory(): CancelablePromise<Array<Calculation>> {
+    public static postApiCalculatorNewSession(): CancelablePromise<any> {
         return __request(OpenAPI, {
-            method: 'GET',
-            url: '/api/Calculator/History',
+            method: 'POST',
+            url: '/api/Calculator/new-session',
         });
     }
 
@@ -35,6 +34,26 @@ requestBody?: CalculationRequest,
             url: '/api/Calculator/calculate',
             body: requestBody,
             mediaType: 'application/json',
+        });
+    }
+
+    /**
+     * @param page 
+     * @param pageSize 
+     * @returns any OK
+     * @throws ApiError
+     */
+    public static getApiCalculatorHistory(
+page: number = 1,
+pageSize: number = 2,
+): CancelablePromise<any> {
+        return __request(OpenAPI, {
+            method: 'GET',
+            url: '/api/Calculator/history',
+            query: {
+                'page': page,
+                'pageSize': pageSize,
+            },
         });
     }
 

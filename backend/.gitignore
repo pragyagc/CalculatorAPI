@@ -9,3 +9,9 @@ obj/
 
 # Ignore other temp files
 *.log
+# Backend (.NET)
+backend/bin/
+backend/obj/
+*.user
+*.suo
+.vs/

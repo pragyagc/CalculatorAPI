@@ -43,18 +43,27 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowReactApp",
         policy =>
         {
-            policy.WithOrigins("http://localhost:5174") // React dev server
+            policy.WithOrigins("http://localhost:5173") // React dev server
                   .AllowAnyHeader()
-                  .AllowAnyMethod();
+                  .AllowAnyMethod()
+                  .AllowCredentials();
         });
 });
 
-
+// Session support
+builder.Services.AddMemoryCache();
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // session lifetime
+    options.Cookie.HttpOnly = true;                 // protect from client-side script
+    options.Cookie.IsEssential = true;              // required for GDPR compliance
+    
+});
 
 var app = builder.Build();
 
-// Use CORS before mapping controllers
-app.UseCors("AllowReactApp");
+
 
 if (app.Environment.IsDevelopment())
 {
@@ -76,8 +85,14 @@ using (var scope = app.Services.CreateScope())
 }
 
 
-
 app.UseHttpsRedirection();
+app.UseRouting();
+// Use CORS before mapping controllers
+app.UseCors("AllowReactApp");
+app.UseSession();
+
+
+
 app.UseAuthorization();
 app.MapControllers();
 app.Run();

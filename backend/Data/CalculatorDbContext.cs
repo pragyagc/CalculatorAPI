@@ -45,6 +45,7 @@ modelBuilder.Entity<Calculation>(entity =>
         entity.Property(e => e.Operator).HasColumnName("operator");
         entity.Property(e => e.Result).HasColumnName("result");
         entity.HasKey(e => e.Id);
+                entity.Property(e => e.SessionId).HasColumnName("session_id");
                 entity.Property(e => e.Id).HasColumnName("id");
     });
 

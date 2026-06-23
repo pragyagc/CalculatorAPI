@@ -1,120 +1,110 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { CalculatorService } from "./services/services/CalculatorService";
-import "./Calculator.css";
 
-function App() {
-  const [display, setDisplay] = useState("");
-  const [operandA, setOperandA] = useState("");
-  const [operandB, setOperandB] = useState("");
-  const [operation, setOperation] = useState<string | null>(null);
-  const [currentOperand, setCurrentOperand] = useState<"A" | "B">("A");
-  const [history, setHistory] = useState<any[]>([]); // no Calculation type
-
-  useEffect(() => {
-    loadHistory();
-  }, []);
-
-  const enterDigit = (digit: string) => {
-    if (currentOperand === "A") {
-      setOperandA(operandA + digit);
-      setDisplay(operandA + digit);
-    } else {
-      setOperandB(operandB + digit);
-      setDisplay(operandB + digit);
-    }
-  };
-
-  const chooseOperation = (op: string) => {
-    setOperation(op);
-    setCurrentOperand("B");
-    setDisplay(op);
-  };
-
-const calculate = async () => {
-  
-  
-  const a = parseFloat(operandA);
-  const b = parseFloat(operandB);
-
-  // Must match CalculationRequest exactly
-  const requestBody = {
-    a: a,
-    b: b,
-    operation: operation!   // ✅ not "operator"
-  };
-
-  
-
-  try {
-  
-    const response: any = await CalculatorService.postApiCalculatorCalculate(requestBody);
-   
-    setDisplay(response);
-    // Keep result as new operandA so chaining works
-    setOperandA(response);
-
-    // Reset operandB for next input
-    setOperandB("");
-
-    // Reset operation so user can pick a new one
-    setOperation(null);
-
-    // Next input should go into operandB
-    setCurrentOperand("B");
-
-    loadHistory();
-  } catch (err) {
-    setDisplay("Error: " + (err as Error).message);
-  }
+type HistoryItem = {
+  operandA: number;
+  operandB: number;
+  operator: string;
+  result: number;
 };
 
+type HistoryResponse = {
+  items: HistoryItem[];
+  totalCount: number;
+};
 
-  const clearAll = () => {
-    setOperandA("");
-    setOperandB("");
-    setOperation(null);
-    setDisplay("");
-    setCurrentOperand("A");
+type CalculateResponse = {
+  result: number;
+};
+
+function App() {
+  const [a, setA] = useState("");
+  const [b, setB] = useState("");
+  const [operation, setOperation] = useState("+");
+
+  const [result, setResult] = useState<number | null>(null);
+  const [history, setHistory] = useState<HistoryItem[]>([]);
+  const [loading, setLoading] = useState(false);
+
+  // 1. Create session once
+  useEffect(() => {
+    CalculatorService.postApiCalculatorNewSession();
+  }, []);
+
+  // 2. Calculate
+  const calculate = async () => {
+    try {
+      setLoading(true);
+
+      const res = (await CalculatorService.postApiCalculatorCalculate({
+        a: Number(a),
+        b: Number(b),
+        operation,
+      })) as CalculateResponse;
+
+      setResult(res.result);
+    } catch (err) {
+      console.error(err);
+      alert("Calculation failed");
+    } finally {
+      setLoading(false);
+    }
   };
 
+  // 3. Load history 
   const loadHistory = async () => {
     try {
-      const data: any[] = await CalculatorService.getApiCalculatorHistory();
-      setHistory(data);
+      const res = (await CalculatorService.getApiCalculatorHistory(
+        1,
+        10
+      )) as HistoryResponse;
+
+      setHistory(res.items);
     } catch (err) {
-      console.error("Failed to load history", err);
+      console.error(err);
+      alert("Failed to load history");
     }
+  };
+
+  // 4. New session
+  const startNewSession = async () => {
+    await CalculatorService.postApiCalculatorNewSession();
+    setHistory([]);
+    setResult(null);
+    setA("");
+    setB("");
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "30px" }}>
-      <h2>React Calculator</h2>
-      <div className="calculator">
-        <input className="display" value={display} readOnly />
+    <div style={{ maxWidth: 600, margin: "40px auto" }}>
+      <h1>Calculator</h1>
 
-        <div className="buttons">
-          {[1,2,3,4,5,6,7,8,9,0].map(d => (
-            <button key={d} onClick={() => enterDigit(d.toString())}>{d}</button>
-          ))}
-          <button onClick={() => chooseOperation("+")}>+</button>
-          <button onClick={() => chooseOperation("-")}>-</button>
-          <button onClick={() => chooseOperation("*")}>*</button>
-          <button onClick={() => chooseOperation("/")}>/</button>
-          <button onClick={calculate}>=</button>
-          <button onClick={clearAll}>C</button>
-        </div>
-      </div>
+      <input value={a} onChange={(e) => setA(e.target.value)} />
+      <select value={operation} onChange={(e) => setOperation(e.target.value)}>
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+      </select>
+      <input value={b} onChange={(e) => setB(e.target.value)} />
 
-      <h3>History</h3>
-      <ul style={{ listStyle: "none", padding: 0 }}>
-        {history.map((calc, index) => (
-          <li key={index}>
-            {calc.operandA} {calc.operator} {calc.operandB} = {calc.result}
+      <button onClick={calculate} disabled={loading}>
+        {loading ? "..." : "Calculate"}
+      </button>
+
+      <button onClick={startNewSession}>New Session</button>
+      <button onClick={loadHistory}>Load History</button>
+
+      {result !== null && <h2>Result: {result}</h2>}
+
+      <ul>
+        {history.map((h, i) => (
+          <li key={i}>
+            {h.operandA} {h.operator} {h.operandB} = {h.result}
           </li>
         ))}
       </ul>
     </div>
   );
 }
-
 export default App;
